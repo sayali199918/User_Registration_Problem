@@ -26,7 +26,7 @@ fi
 
 
 #validate email id
-echo "Enter the valid email:"Email
+echo "Enter the valid email:"
 read Email
 Emailpatt="^[A-Za-z0-9]+([.+-][A-Za-z0-9]{3,})*@[A-Za-z0-9.]+[a-z]{2,3}([.][a-z0-9]{2,})*$"
 if [[ $Email =~ $Emailpatt ]]
@@ -47,3 +47,13 @@ else
 echo "Phone Number Is InValid"
 fi
 
+#validation Password
+echo "Enter the password:"
+read password
+passPatt="^[a-zA-Z]{8,}$"
+if [[ $password =~ $passPatt ]]
+then
+	echo "valid"
+else
+	echo "Invalid password"
+fi
