@@ -23,3 +23,15 @@ echo "Valid"
 else
 echo "InValid"
 fi
+
+
+#validate email id
+echo "Enter the valid email:"Email
+read Email
+Emailpatt="^[A-Za-z0-9]+([.+-][A-Za-z0-9]{3,})*@[A-Za-z0-9.]+[a-z]{2,3}([.][a-z0-9]{2,})*$"
+if [[ $Email =~ $Emailpatt ]]
+then
+	echo "valid email"
+else
+	echo "invalid email"
+fi
