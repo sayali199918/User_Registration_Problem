@@ -12,3 +12,14 @@ then
 else
 	echo "Invalid"
 fi
+
+#validate last name
+echo "Enter The LastName:"
+read name
+namepat1="^[A-Z]{1}[a-z]{2,}$";
+if [[ $name =~ $namepat1 ]]
+then
+echo "Valid"
+else
+echo "InValid"
+fi
