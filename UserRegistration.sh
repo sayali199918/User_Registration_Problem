@@ -35,3 +35,15 @@ then
 else
 	echo "invalid email"
 fi
+
+#validate Phone Number
+echo "Enter The Phone Number:"
+read Pnumber
+Phonepat="^[+1-9]{2,3}[ ]{1}[0-9]{10}$"
+if [[ $Pnumber =~ $Phonepat ]]
+then
+echo "Phone Number Is Valid"
+else
+echo "Phone Number Is InValid"
+fi
+
